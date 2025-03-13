@@ -66,6 +66,7 @@ h1, h2, p {
 }
 
 .menu {
+  margin-top: 50px;
   width: 80%;
   background-color: burlywood;
   margin-left: auto;
@@ -134,5 +135,24 @@ a:hover {
 }
 
 a:active {
+  color: brown;
+}
+.nav-link {
+  color: black;
+  border-radius: 15px;
+  background-color: white;
+  padding: 7px;
+  text-decoration: none;
+}
+
+.nav-link:visited {
+  color: darkgray;
+}
+
+.nav-link:hover {
+  color: brown;
+}
+
+.nav-link:active {
   color: brown;
 }
