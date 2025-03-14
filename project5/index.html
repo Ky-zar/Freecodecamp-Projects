@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="styles.css">
+  <title>Survey Form</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <base href="https://ky-zar.github.io/Freecodecamp-Projects/">
+</head>
+
+<body>
+  <nav>
+      <div>
+        <ul>
+          <li><a class="nav-link" href="index.html">Home</a></li>
+          <li><a class="nav-link" href="contact/index.html">Contact Info</a></li>
+          <li><a class="nav-link" href="about/index.html">About</a></li>
+          <li><a class="nav-link" href="https://whatsapp.com/channel/0029Vb9CgGw8vd1XHzt4e53Y">Channel</a></li>
+        </ul>
+     </div>
+  </nav>
+  <main>
+    <h1 id="title">A Survey form for the channel</h1>
+    <p id="description">This survey form will help me increase my level of work in the channel, I hope you fill it all.</p>
+    <form id="survey-form">
+      <fieldset>
+        <label id="name-label" for="name">Name <input type="text" id="name" placeholder="Enter your Name" required></label>
+        <label id="email-label" for="email">Email <input type="email" id="email" placeholder="Enter your Email" required></label>
+        <label id="number-label" for="number">Phone number <span class="optional">(optional)</span> <input type="number" id="number" min="0" max="9999999999999" placeholder="Phone Number"></label>
+        <label id="age-label" for="age">Age <span class="optional">(optional)</span> <input type="number" id="age" min="13" max"120" placeholder="Age"></label>
+        <label id="state-label" for="state">Which role describes you the best? 
+          <select>
+            <option>Select current role</option>
+            <option>Student</option>
+            <option>Full time job</option>
+            <option>Full time lerner</option>
+            <option>Prefer not to say</option>
+          </select>
+        </label>
+      </fieldset>
+      <fieldset>
+        <legend>Would you recommend the channel to a friend</legend>
+        <label for="def"><input value="def" name="reco" type="radio" id="def" class="inline" checked> Definitely</label>
+        <label for="may"><input value="may" name="reco" type="radio" id="may" class="inline"> Maybe</label>
+        <label for="not"><input value="not" name="reco" type="radio" id="not" class="inline" > Not sure</label>
+      </fieldset>
+      <fieldset>
+        <label id="know-label" for="know">How did you hear about us?
+          <select id="dropdown">
+            <option>Select an option</option>
+            <option>From a friend</option>
+            <option>While scrolling</option>
+            <option>From another platform</option>
+            <option>I don't remember</option>
+          </select>
+        </label>
+      </fieldset>
+      <fieldset>What would you like to see improved? <span class="optional">(check all that apply)</span>
+        <label><input class="inline" type="checkbox" value="sources"> More sources</label>
+        <label><input class="inline" type="checkbox" value="content"> More content</label>
+        <label><input class="inline" type="checkbox" value="upgrade"> improve content</label>
+        <label><input class="inline" type="checkbox" value="exp"> More explaination</label>
+      </fieldset>
+      <fieldset>
+        <label for="comment">Any comments or suggestions?
+          <textarea id="comment" name="comment" rows="3" cols="30" placeholder="Enter your comment here..."></textarea>
+        </label>
+      </fieldset>
+      <input id="submit" type="submit" value="Submit" />
+    </form>
+  </main>
+</body>
+</html>
