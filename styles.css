@@ -18,6 +18,8 @@ main {
 }
 
 nav {
+  overflow-x: auto;
+  white-space: nowrap;
   margin: 0;
   width: 100%;
   height: 60px;
