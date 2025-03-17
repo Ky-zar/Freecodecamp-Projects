@@ -7,10 +7,16 @@ body {
   height: 100%;
   overflow-x: hidden;
   text-align: center;
+  font-family: "Open Sans",Sans-Serif;
+  font-size: 16px;
 }
 
 .heading {
   font-size: clamp(2rem, calc(8vw + 1rem), 5rem);
+}
+
+.pixel {
+  font-family: "Tiny5";
 }
 
 header h1 {
@@ -71,7 +77,8 @@ article {
   margin: 1rem auto;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-around;
+  
 }
 
 article section {
@@ -82,7 +89,7 @@ section div {
   margin: 10px;
   border: 3px dotted white;
   border-radius: 15px;
-  padding: min(7px, 2%);
+  padding: 1vw;
   background-color: black;
   margin: 1rem auto;
 }
@@ -90,12 +97,12 @@ section div {
 section ul {
   list-style: none;
   padding: 0;
-  margin: 10px 0 0 0;
-  font-size: clamp(1rem, calc(3vw + 1rem), 0.5rem);
+  margin: 10px auto 0;
+  font-size: clamp(0.2rem, calc(1vw + 1rem), 1rem);
 }
 
 section li {
-  margin: 25px 0;
+  margin: 25px auto;
 }
 
 a {
@@ -104,7 +111,6 @@ a {
   background-color: white;
   padding: 7px;
   text-decoration: none;
-  margin: 0.5rem;
 }
 
 a:visited {
