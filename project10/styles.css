@@ -61,7 +61,7 @@ ul li {
 @media (min-width: 577px) and (max-width: 768px) {
   html,
   body {
-    font-size: 30px;
+    font-size: 20px;
   }
   
   img {
@@ -78,7 +78,7 @@ ul li {
 @media (min-width: 769px) and (max-width: 992px) {
   html,
   body {
-    font-size: 30px;
+    font-size: 16px;
   }
   
   img {
@@ -95,7 +95,7 @@ ul li {
 @media (min-width: 993px) and (max-width: 1200px) {html,
   html,
   body {
-    font-size: 30px;
+    font-size: 20px;
   }
   
   img {
@@ -112,7 +112,7 @@ ul li {
 /* Desktops and Large Screens */
 @media (min-width: 1201px) {html,
   body {
-    font-size: 30px;
+    font-size: 25px;
   }
   
   img {
