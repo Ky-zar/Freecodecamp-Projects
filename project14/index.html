@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800">
+  <title>Technical Documentation: CSS and JavaScript</title>
+</head>
+<body>
+  <nav>
+    <header><h1>Technical Documentation: CSS and JavaScript</h1></header>
+    <ol>
+      <li><a class="main" href="#Introduction">Introduction</a></li>
+      <li>
+        <a href="#Introduction_to_CSS" class="main">Introduction to CSS</a>
+        <ul>
+          <li><a href="#What_is_CSS?">What is CSS?</a></li>
+          <li><a href="#Why_Use_CSS?">Why Use CSS?</a></li>
+          <li><a href="#Basic_Syntax">Basic Syntax</a></li>
+          <li><a href="#Selectors">Selectors</a></li>
+          <li><a href="#Box Model">Box Model</a></li>
+          <li><a href="#Flexbox_and_Grid">Flexbox and Grid</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#Intermediate_CSS" class="main">Intermediate CSS</a>
+        <ul>
+          <li><a href="#Pseudo-Classes_and_Pseudo-Elements">Pseudo-Classes and Pseudo-Elements</a></li>
+          <li><a href="#Transitions_and_Animations">Transitions and Animations</a></li>
+          <li><a href="#Responsive_Design_with_Media_Queries">Responsive Design with Media Queries</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#Advanced_CSS" class="main">Advanced CSS</a>
+        <ul>
+          <li><a href="#CSS_Variables">CSS Variables</a></li>
+          <li><a href="#Advanced_Layout_Techniques">Advanced Layout Techniques</a></li>
+          <li><a href="#Accessibility_and_Best_Practices">Accessibility and Best Practices</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#Introduction_to_JavaScript" class="main">Introduction to JavaScript</a>
+        <ul>
+          <li><a href="#What_is_JavaScript?">What is JavaScript?</a></li>
+          <li><a href="#Why_Use_JavaScript?">Why Use JavaScript?</a></li>
+          <li><a href="#Basic_Syntax">Basic Syntax</a></li>
+          <li><a href="#Variables_and_Data_Types">Variables and Data Types</a></li>
+          <li><a href="#Functions">Functions</a></li>
+          <li><a href="#DOM_Manipulation">DOM Manipulation</a></li>
+        </ul>
+      </li>
+      <li>
+        <a class="main" href="#Intermediate_JavaScript">Intermediate JavaScript</a>
+        <ul>
+          <li><a href="#Arrays_and_Objects">Arrays and Objects</a></li>
+          <li><a href="#Loops_and_Iteration">Loops and Iteration</a></li>
+          <li><a href="#Event_Handling">Event Handling</a></li>
+          <li><a href="#Error_Handling">Error Handling</a></li>
+        </ul>
+      </li>
+      <li><a class="main" href="#Resources">Resources</a></li>
+    </ol>
+  </nav>
+
+  <main>
+    <h1 id="Introduction">Introduction</h1>
+    <p>
+      Welcome to the <span class="imp">CSS and JavaScript</span> technical documentation page! This guide provides an in-depth exploration of key concepts, syntax, and practical examples to help you master both <span class="imp">CSS</span> and <span class="imp">JavaScript</span>. We'll cover everything from basic to intermediate JavaScript and from basic to advanced CSS, with detailed explanations for each concept.
+    </p>
+
+    <h1 id="Introduction_to_CSS">Introduction to CSS</h1>
+    <h2 id="What_is_CSS?">What is CSS?</h2>
+    <p>
+      <span class="imp">CSS <span class="parentheses">(Cascading Style Sheets)</span></span> is a stylesheet language used to describe the presentation of a document written in HTML.
+    </p>
+    <p>
+      It controls the layout, colors, fonts, and overall design of web pages, making them visually appealing and responsive.
+    </p>
+    <h2 id="What_is_CSS">Why Use CSS?</h2>
+    <ul>
+      <li><span class="imp">Separation of Concerns</span>: Keeps styling separate from content, making code easier to maintain.</li>
+      <li><span class="imp">Reusability</span>: Styles can be reused across multiple pages.</li>
+      <li><span class="imp">Consistency</span>: Ensures a uniform look and feel across a website.</li>
+    </ul>
+    <h2 id="Basic_Syntax">Basic Syntax</h2>
+    <p>
+      CSS rules consist of <span class="imp">selectors</span> and <span class="imp">declarations</span>:
+    </p>
+    <div class="code">
+      selector {<br>
+       property: value; <br></s>
+    }
+    </div>
+    <ul>
+      <li><span class="imp">Selector</span>: Targets the HTML element(s) to style.</li>
+      <li><span class="imp">Property</span>: The style attribute to modify (e.g., <span class="tag">color</span>, <span class="tag">font-size</span>).</li>
+      <li><span class="imp">Value</span>: The value assigned to the property.</li>
+    </ul>
+    <div class="code">
+      h1 { <br>
+       color: blue; <span class="comment">/* Changes text color to blue */</span> <br></s>
+       font-size: 24px; <span class="comment">/* Sets font size to 24 pixels */ </span><br></span>
+      }
+    </div>
+    <h2 id="Selectors">Selectors</h2>
+    <p>
+      Selectors determine which elements the CSS rules apply to. There are several types of selectors:
+    </p>
+    <ol>
+      <li>
+        <h3>Element Selector</h3>
+        <ul>
+          <li>Targets HTML tags directly.</li>
+          <li>Doesn't start or end with a special character.</li>
+        </ul>
+        <div class="code">
+          p {<br>
+          color: gray; <br>
+          }
+        </div>
+      </li>
+      <li>
+        <h3>Class Selector</h3>
+        <ul>
+          <li>Targets elements with a specific class.</li>
+          <li>The class name is preceeded by a dot <span class="tag">.</span></li>
+        </ul>
+        <div class="code">
+          .highlight {<br>
+          background-color: yellow; <br>
+          }
+        </div>
+      </li>
+      <li>
+        <h3>ID Selector</h3>
+        <ul>
+          <li>Targets a unique element by its ID.</li>
+          <li>The ID is preceeded by a hashtag <span class="tag">#</span></li>
+        </ul>
+        <div class="code">
+          #header {<br>
+          font-weight: bold; <br></span>
+          }
+        </div>
+      </li>
+      <li>
+        <h3>Attribute Selector</h3>
+        <ul>
+          <li>Targets elements based on their attributes.</li>
+          <li>Tags are followed by a brackets and the attribute within (e.g, <span class="tag">input[type="text"]</span> )</li>
+        </ul>
+        <div class="code">
+          input[type="text"] {<br>
+          border: 1px solid black; <br></span>
+          }
+        </div>
+      </li>
+      <li>
+        <h3>Universal Selector</h3>
+        <ul>
+          <li>Targets all elements.</li>
+          <li>Represented by a star <span class="tag">*</span>.</li>
+        </ul>
+        <div class="code">
+            * {<br>
+             margin: 0; <br>
+             padding: 0; <br>
+            }
+        </div>
+      </li>
+    </ol>
+    <h2 id="Box Model">Box Model</h2>
+    <p>Every HTML element is represented as a rectangular box, consisting of:</p>
+    <ol>
+      <li><span class="imp">Content</span>: The inner text or media.</li>
+      <li><span class="imp">Padding</span>: Space between the content and the border.</li>
+      <li><span class="imp">Border</span>: The outline around the padding.</li>
+      <li><span class="imp">Margin</span>: Space outside the border.</li>
+    </ol>
+    <div class="code">
+        div {<br>
+         width: 200px;<br></span>
+         padding: 10px;<br></span>
+         border: 2px solid black;<br></span>
+         margin: 20px;<br></span>
+        }
+    </div>
+    <h3>Key Points:</h3>
+    <ul>
+      <li>
+        <span class="imp">Width and Height</span>: Include padding and border unless using <span class="tag">box-sizing: border-box</span>.
+        </li>
+      <div class="code kh">
+      * {<br>
+        box-sizing: border-box;<br>
+       }
+      </div>
+      <li>
+        <span class="imp">Margin Collapse</span>: Adjacent vertical margins collapse into a single margin.
+        </li>
+    </ul>
+    <h2 id="Flexbox_and_Grid">Flexbox and Grid</h2>
+    <p>Modern layout techniques include:</p>
+    <ul>
+      <li><span class="imp">Flexbox</span>: A one-dimensional layout model for arranging items in rows or columns.</li>
+      <li><span class="imp">Grid</span>: A two-dimensional layout system for designing complex layouts.</li>
+    </ul>
+    <h2>Flexbox</h2>
+    <h3>Main Concepts</h3>
+    <ul>
+      <li><span class="imp">Container</span>: The parent element that holds flex items.</li>
+      <li><span class="imp">Items</span>: The child elements inside the container.</li>
+      <li><span class="imp">Axes</span>: Main axis (horizontal or vertical) and cross axis.</li>
+    </ul>
+    <div class="code">
+    .container { <br>
+       display: flex;</span><br>
+       justify-content: center; <span class="comment">/* Centers items horizontally */</span></span><br>
+       align-items: center; <span class="comment">/* Centers items vertically */</span></span><br>
+    }
+    </div>
+    <h2>Grid</h2>
+    <h3>Main Concepts</h3>
+    <ul>
+      <li><span class="imp">Grid Container</span>: The parent element.</li>
+      <li><span class="imp">Grid Items</span>: The child elements.</li>
+      <li><span class="imp">Rows and Columns</span>: Define the grid structure.</li>
+    </ul>
+    <div class="code">
+      .grid-container {
+       display: grid;</span><br>
+       grid-template-columns: repeat(3, 1fr);</span><br>
+       gap: 20px;</span><br>
+      }
+    </div>
+    <h1 id="Intermediate_CSS">Intermediate CSS</h1>
+    <h2 id="Pseudo-Classes_and_Pseudo-Elements">Pseudo-Classes and Pseudo-Elements</h2>
+    <p>
+      Pseudo-classes and pseudo-elements allow you to style specific states or parts of elements:
+    </p>
+    <ol>
+      <li>
+        <h3>Pseudo-Classes</h3>
+        <ul>
+          <li>Target elements based on their state (e.g., <span class="tag">:hover</span>, <span class="tag">nth-child</span>).</li>
+          <li>
+            <p>Example:</p>
+          </li>
+        </ul>
+        <div class="code">
+          a:hover {<br>
+          color: red; <span class="comment">/* Changes link color on hover */</span></span><br>
+          }
+        </div>
+      </li>
+      <li>
+        <h3>Pseudo-Elements</h3>
+        <ul>
+          <li>Style specific parts of an element (e.g., <span class="tag">::before</span>, <span class="tag">::after</span>).</li>
+          <li>
+            <p>Example:</p>
+          </li>
+        </ul>
+        <div class="code">
+          p::first-line {<br>
+          font-weight: bold; <span class="comment">/* Styles the first line of a paragraph */</span></span><br>
+          }
+        </div>
+      </li>
+    </ol>
+    <h2 id="Transitions_and_Animations">Transitions and Animations</h2>
+    <p>CSS transitions and animations add dynamic effects to elements:</p>
+    <ol>
+      <li>
+        <h3>Transitions</h3>
+        <ul>
+          <li>Smoothly change property values over time.</li>
+          <li>
+            <p>Example:</p>
+          </li>
+        </ul>
+        <div class="code">
+          button {<br>
+          background-color: blue;</span><br>
+          transition: background-color 0.5s ease;</span><br>
+          } <br>
+          button:hover { <br>
+          background-color: green;</span><br>
+          }
+        </div>
+      </li>
+      <li>
+        <h3>Animations</h3>
+        <ul>
+          <li>Define keyframes for more complex animations.</li>
+          <li>
+            <p>Example:</p>
+          </li>
+        </ul>
+      </li>
+      <div class="code">
+        @keyframes slideIn {
+        from { transform: translateX(-100%); }</span><br>
+        to { transform: translateX(0); }</span><br>
+        }<br>
+
+        .box {<br>
+        animation: slideIn 2s ease-in-out;</span><br>
+        }
+      </div>
+    </ol>
+    <h2 id="Responsive_Design_with_Media_Queries">Responsive Design with Media Queries</h2>
+    <p>Media queries allow you to apply styles based on screen size or device type:</p>
+    <div class="code">
+      @media (max-width: 768px) {<br>
+       body {</span><br>
+      <span class="double-ident">font-size: 14px;</span><br>
+       }</span><br>
+      }
+    </div>
+    <h3>Key Points:</h3>
+    <ul>
+      <li><span class="imp">Breakpoints</span>: Common breakpoints include 320px, 480px, 768px, 1024px, and 1200px.</li>
+      <li><span class="imp">Mobile-First Design</span>: Start with styles for small screens and use <span class="tag">min-width</span> to add styles for larger screens.</li>
+    </ul>
+    <h1 id="Advanced_CSS">Advanced CSS</h1>
+    <h2 id="CSS_Variables">CSS Variables</h2>
+    <p>CSS variables (custom properties) allow you to define reusable values:</p>
+    <div class="code">
+      :root {<br>
+       --primary-color: #3498db;</span><br>
+      }<br>
+
+      button {<br>
+       background-color: var(--primary-color);</span><br>
+      }
+    </div>
+    <h3>Key Points:</h3>
+    <ul>
+      <li><span class="imp">Scope</span>: Variables defined in <span class="tag">:root</span> are global.</li>
+      <li><span class="imp">Fallbacks</span>: Provide a fallback value if the variable is not defined.</li>
+    </ul>
+    <div class="code">
+      color: var(--text-color, black);
+    </div>
+    <h2 id="Advanced_Layout_Techniques">Advanced Layout Techniques</h2>
+    <p>Advanced techniques like <span class="imp">CSS Grid</span> and <span class="imp">positioning</span> enable precise control over layouts:</p>
+    <ol>
+      <li>
+        <h3>Positioning</h3>
+        <ul>
+          <li><span class="imp">Static</span>: Default positioning.</li>
+          <li><span class="imp">Relative</span>: Positioned relative to its normal position.</li>
+          <li><span class="imp">Absolute</span>: Positioned relative to the nearest positioned ancestor.</li>
+          <li><span class="imp">Fixed</span>: Positioned relative to the viewport.</li>
+          <li><span class="imp">Sticky</span>: Toggles between relative and fixed positioning.</li>
+        </ul>
+      </li>
+      <div class="code">
+          .sticky-header {<br>
+           position: sticky;</span><br>
+           top: 0;</span><br>
+          }
+      </div>
+      <li>
+        <h3>Grid Layouts</h3>
+        <p>
+          Use <span class="tag">grid-template-areas</span> for named areas.
+        </p>
+        <div class="code">
+          .container {<br>
+           display: grid;</span><br>
+           grid-template-areas:</span><br>
+           <span class="double-ident">"header header"</span><br>
+           <span class="double-ident">"sidebar main"</span><br>
+           <span class="double-ident">"footer footer";</span><br>
+          }<br>
+
+          .header { <br>
+           grid-area: header;</span><br>
+          }
+        </div>
+      </li>
+    </ol>
+    <h2 id="Accessibility_and_Best_Practices">Accessibility and Best Practices</h2>
+    <p>
+      Follow accessibility guidelines to ensure your designs are inclusive:
+    </p>
+    <ul>
+      <li><span class="imp">Semantic HTML</span>: Use proper HTML tags (e.g., <span class="tag">&lt;header&gt;</span>, <span class="tag">&lt;main&gt;</span>).</li>
+      <li><span class="imp">Contrast</span>: Ensure sufficient contrast between text and background.</li>
+      <li><span class="imp">ARIA Roles</span>: Use ARIA roles for dynamic content.</li>
+    </ul>
+    <div class="code">
+        &lt;button aria-label="Close"&gt;X&lt;/button&gt;
+    </div>
+    <h1 id="Introduction_to_JavaScript">Introduction to javascript</h1>
+    <h2 id="What_is_JavaScript?">What is JavaScript?</h2>
+    <p>
+      <span class="imp">JavaScript</span> is a programming language that adds interactivity and dynamic behavior to web pages.</p>
+    <p>
+      It enables features like animations, form validation, and data manipulation.
+    </p>
+    <h2 id="Why_Use_JavaScript?">Why Use JavaScript?</h2>
+    <ul>
+      <li><span class="imp">Interactivity</span>: Makes websites dynamic and engaging.</li>
+      <li><span class="imp">Versatility</span>: Works on both client-side and server-side (Node.js).</li>
+      <li><span class="imp">Ecosystem</span>: Extensive libraries and frameworks (e.g., React, Vue, Angular).</li>
+    </ul>
+    <h2 id="Basic_Syntax">Basic Syntax</h2>
+    <p>
+      JavaScript code is executed by the browser and follows a simple structure:
+    </p>
+    <div class="code">
+      <span class="comment">// Single-line comment<br>
+      /* Multi-line comment */</span><br>
+
+      console.log("Hello, World!"); <span class="comment">// Outputs text to the console</span>
+    </div>
+    <h2 id="Variables_and_Data_Types">Variables and Data Types</h2>
+    <p>Variables store data values. JavaScript supports several data types:</p>
+    <ul>
+      <li><span class="imp">Strings</span>: Text (e.g., <span class="tag">"Hello"</span>).</li>
+      <li><span class="imp">Numbers</span>: Integers or decimals (e.g., <span class="tag">42</span>, <span class="tag">3.14</span>).</li>
+      <li><span class="imp">Booleans</span>: True or false values (e.g., <span class="tag">true</span>, <span class="tag">false</span>).</li>
+    </ul>
+    <div class="code">
+      let name = "John"; <span class="comment">// String</span><br>
+      let age = 25; <span class="comment">// Number<br></span>
+      let isStudent = true; <span class="comment">// Boolean</span>
+    </div>
+    <h2 id="Functions">Functions</h2>
+    <p>
+      Functions are reusable blocks of code that perform specific tasks:
+    </p>
+    <div class="code">
+      function greet(name) {<br>
+       </span>return "Hello, " + name + "!";</span><br>
+      }<br>
+      console.log(greet("Alice")); <span class="comment">// Output: Hello, Alice!</span>
+    </div>
+    <h2 id="DOM_Manipulation">DOM Manipulation</h2>
+    <p>
+      The <span class="imp">Document Object Model (DOM)</span> represents the structure of a web page. 
+    </p>
+    <p>
+      JavaScript can manipulate the DOM to dynamically update content.
+    </p>
+    <div class="code">
+      document.getElementById("demo").innerHTML = "Updated Content!";
+    </div>
+    <h1 id="Intermediate_JavaScript">Intermediate JavaScript</h1>
+    <h2 id="Arrays_and_Objects">Arrays and Objects</h2>
+    <p>
+      Arrays and objects are used to store collections of data:
+    </p>
+    <ul>
+      <li><span class="imp">Arrays</span>: Ordered lists of values.</li>
+      <li><span class="imp">Objects</span>: Key-value pairs.</li>
+    </ul>
+    <div class="code">
+      let fruits = ["apple", "banana", "cherry"]; <br>
+      let person = { name: "John", age: 25 };
+    </div>
+    <h2 id="Loops_and_Iteration">Loops and Iteration</h2>
+    <p>Loops allow you to iterate over arrays or perform repetitive tasks:</p>
+    <div class="code">
+      for (let i = 0; i < fruits.length; i++) {<br>
+       console.log(fruits[i]);</span><br>
+      }
+    </div>
+    <h2 id="Event_Handling">Event Handling</h2>
+    <p>
+      Event listeners allow you to respond to user interactions:
+    </p>
+    <div class="code">
+      button.addEventListener("click", function() {<br>
+       alert("Button clicked!");</span><br>
+      });
+    </div>
+    <h2 id="Error_Handling">Error Handling</h2>
+    <p>
+      Use <span class="tag">try...catch</span> to handle errors gracefully:
+    </p>
+    <div class="code">
+      try { <br>
+       throw new Error("Something went wrong!");</span><br>
+      } catch (error) {
+       console.error(error.message);</span><br>
+      }
+    </div>
+    <h1 id="Resources">Resources</h1>
+    <p>
+      Here are some helpful resources to deepen your understanding of CSS and JavaScript:
+    </p>
+    <ul>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">MDN Web Docs: CSS</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">MDN Web Docs: JavaScript</a></li>
+      <li><a href="https://www.freecodecamp.org/learn/">freeCodeCamp CSS Course</a></li>
+      <li><a href="https://www.freecodecamp.org/learn/">freeCodeCamp JavaScript Course</a></li>
+      <li><a href="https://css-tricks.com/">CSS-Tricks</a></li>
+      <li><a href="https://javascript.info/">JavaScript.info</a></li>
+    </ul>
+  
+  </main>
+</body>
+</html>
